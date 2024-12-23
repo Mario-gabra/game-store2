@@ -1,0 +1,349 @@
+/* Start Global Rules */
+body {
+  font-family: "Cairo", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1170px;
+}
+/* End Global Rules */
+/* Start Header */
+.header {
+  box-shadow: 0 0 10px #ddd;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.dateOfTime {
+  font-size: 20px;
+}
+.header .logo {
+  color: #2196f3;
+  font-size: 26px;
+  font-weight: bold;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .main-nav {
+  display: flex;
+}
+.header .main-nav > li:hover .mega-menu {
+  opacity: 1;
+  z-index: 100;
+  top: calc(100% + 1px);
+}
+.header .main-nav > li > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+  position: relative;
+  color: black;
+  padding: 0 30px;
+  overflow: hidden;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.header .main-nav > li > a:hover {
+  color: #2196f3;
+  background-color: #fafafa;
+}
+.header .mega-menu {
+  position: absolute;
+  background-color: white;
+  z-index: -1;
+  display: flex;
+  gap: 40px;
+  top: calc(100% + 50px);
+  opacity: 0;
+  right: 15px;
+  transition: top 0.3s, opacity 0.3s;
+}
+.header .mega-menu .links {
+  text-align: center;
+}
+.header .mega-menu .links li {
+  position: relative;
+}
+.header .mega-menu .links li:not(:last-child) {
+  border-bottom: 1px solid #e9e6e6;
+}
+.header .mega-menu .links li:hover a {
+  color: #2196f3;
+  background-color: #fafafa;
+}
+.header .mega-menu .links li a {
+  color: #2196f3;
+  padding: 15px;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+/* End Header */
+/* Start game_store */
+.game_store {
+  position: relative;
+}
+.game_store .container {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+}
+.game_store .container .dateOfTime {
+  position: absolute;
+  top: 7%;
+  right: 50%;
+  font-size: 24px;
+  transform: translate(50%, -93%);
+}
+.game_store .text {
+  flex: 1;
+}
+.game_store .text h1 {
+  font-size: 40px;
+  margin: 0;
+  letter-spacing: -2px;
+}
+.game_store .text p {
+  font-size: 23px;
+  line-height: 1.7;
+  margin: 5px 0 0;
+  color: #666;
+  max-width: 500px;
+}
+.game_store .image img {
+  position: relative;
+  width: 450px;
+  animation: up-and-down 5s linear infinite;
+  border-radius: 25px;
+}
+/* End game_store */
+/* Start Articles */
+.articles {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.articles .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+.articles .box {
+  box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.articles .box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+}
+.articles .box img {
+  width: 100%;
+  max-width: 100%;
+}
+.articles .box .content {
+  padding: 20px;
+}
+.articles .box .content h3 {
+  margin: 0;
+}
+.articles .box .content p {
+  margin: 10px 0 0;
+  line-height: 1.5;
+  color: #777;
+}
+.articles .box .info {
+  padding: 20px;
+  border-top: 1px solid #e6e6e7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.articles .box .info a {
+  color: #2196f3;
+  font-weight: bold;
+}
+.articles .box .info i {
+  color: #2196f3;
+}
+.articles .box:hover .info i {
+  animation: moving-arrow 0.6s linear infinite;
+}
+/* End Articles */
+/* Start Comments */
+.Comments {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.Comments .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 65px;
+}
+.Comments .box {
+  padding: 20px;
+  background-color: #ececec;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 7%);
+  border-radius: 6px;
+  position: relative;
+}
+.Comments .box img {
+  position: absolute;
+  right: -10px;
+  top: -50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid white;
+}
+.Comments .box h3 {
+  margin: 0 0 10px;
+}
+.Comments .box .title {
+  color: #777;
+  margin-bottom: 10px;
+  display: block;
+}
+.Comments .box .rate .filled {
+  color: #ffc107;
+}
+.Comments .box p {
+  line-height: 1.5;
+  color: #777;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+/* End Comments */
+/* Start games */
+.games {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.games .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+.games .box {
+  position: relative;
+}
+.games .box::before{
+  content: "";
+  background-color: #f3f3f3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.games .box::before {
+  width: calc(100%);
+  z-index: -2;
+}
+.games .box .data {
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+}
+.games .box .data img {
+  width: calc(100% - 50px);
+  transition: 0.3s;
+  border-radius: 10px;
+  position: relative;
+  right: -25px;
+}
+.games .box .data .social {
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.games .box .data .social a {
+  width: 60px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.games .box .data .social i {
+  color: #777;
+  transition: 0.3s;
+}
+.games .box .info {
+  padding-left: 80px;
+}
+.games .box .info h3 {
+  margin-bottom: 0;
+  color: #2196f3;
+  font-size: 22px;
+  transition: 0.3s;
+}
+.games .box .info h3 a {
+  color: #2196f3;
+}
+.games .box .info p {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+/* End games */
+/* Start Table  */
+.table {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+}
+.table .container .parent{
+  width: 400px;
+  margin: 20px auto;
+}
+.table .container table{
+  width: 100%;
+  margin: 20px auto;
+  font-size: 22px;
+}
+.table .container table thead td{
+  background-color: #eee;
+  color: black;
+  padding: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+.table .container tbody td{
+  background-color: #eee;
+  text-align: center;
+  padding: 20px;
+}
+/* End Table  */
+/* Start Animation */
+@keyframes up-and-down {
+  0%,
+  100% {
+    top: 0;
+  }
+  50% {
+    top: -50px;
+  }
+}
+/* End Animation */
